@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation - Amulya Sai & Praneeth</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Great+Vibes&family=Montserrat:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+        :root {
+            --royal-maroon: #630d0d;
+            --gold-gradient: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            --soft-gold: #d4af37;
+            --cream-bg: #fffdf5;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--cream-bg);
+            color: var(--royal-maroon);
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* Premium Border - Responsive */
+        .page-wrapper {
+            border: 8px solid var(--soft-gold);
+            min-height: 100vh;
+            margin: 10px;
+            padding: 20px 10px;
+            position: relative;
+            background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+        }
+
+        .header-shlokas {
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            color: var(--soft-gold);
+            display: flex;
+            justify-content: space-around;
+            max-width: 500px;
+            margin: 0 auto 20px;
+        }
+
+        .main-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            margin: 10px 0;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .invite-text {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 3px;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+
+        .parents-info {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin: 20px auto;
+            max-width: 600px;
+            font-style: italic;
+        }
+
+        .couple-names {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 30px 0;
+            line-height: 1.2;
+        }
+
+        /* Highlighted Muhurtham Section */
+        .muhurtham-card {
+            background-color: var(--royal-maroon);
+            color: white;
+            padding: 30px 15px;
+            margin: 40px auto;
+            max-width: 500px;
+            border: 2px solid var(--soft-gold);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .muhurtham-card h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--soft-gold);
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .map-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: var(--gold-gradient);
+            color: var(--royal-maroon);
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            font-size: 0.8rem;
+            border-radius: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        /* Section dividers */
+        .event-box {
+            margin: 50px 0;
+            padding: 0 15px;
+        }
+
+        .event-box h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            border-bottom: 1px solid var(--soft-gold);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Responsive Timer */
+        .timer-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            max-width: 400px;
+            margin: 30px auto;
+        }
+
+        .time-part {
+            background: rgba(191, 149, 63, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid var(--soft-gold);
+        }
+
+        .time-num {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .time-label {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            padding: 0 10px;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .photo-placeholder {
+            aspect-ratio: 1 / 1.2;
+            background: #eee;
+            border: 2px solid var(--soft-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        footer {
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            color: var(--soft-gold);
+            background: #4a0909;
+        }
+
+        @media (max-width: 600px) {
+            .main-title { font-size: 2.5rem; }
+            .couple-names { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="header-shlokas">
+            <span>Srirasthu</span>
+            <span>Shubhamasthu</span>
+            <span>Avighnamasthu</span>
+        </div>
+
+        <div style="font-size: 2rem; color: var(--soft-gold);">श्री गणेशाय नमः</div>
+        <div class="invite-text">Jonnalagadda's Wedding Invitation</div>
+
+        <div class="parents-info">
+            <strong>Smt. & Sri Jonnalagadda Nagamani - Srinivasa Rao</strong><br>
+            are inviting for the wedding ceremony of our daughter,
+        </div>
+
+        <div class="couple-names">
+            Chi. La. Sow. Amulya Sai<br>
+            <span style="font-family: 'Great Vibes'; font-size: 2.5rem; color: var(--soft-gold);">weds</span><br>
+            Chi. Praneeth
+        </div>
+        
+        <div class="parents-info">
+          S/O <br>
+          <strong>Smt. & Sri Borlam Sharada - Narender</strong>
+        </div>
+
+        <div class="muhurtham-card">
+            <h2>The Sacred Muhurtham</h2>
+            <div style="font-size: 1.3rem;">Friday, 08th May 2026</div>
+            <div style="font-size: 1.8rem; font-weight: bold; margin: 10px 0;">At 10:26 AM</div>
+            <p style="margin-bottom: 5px;"><strong>Vasavi Kalyana Mandapam</strong></p>
+            <p style="font-size: 0.9rem;">Opp. Sensation Cinema, Khairatabad, Hyderabad</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Vasavi+Kalyana+Mandapam+Khairatabad+Hyderabad" target="_blank" class="map-btn">📍 View in Map</a>
+        </div>
+
+        <div class="event-box">
+            <h3>The Reception</h3>
+            <p style="font-size: 1.1rem; margin: 15px 0;">Sunday, 10th May 2026<br>07:00 PM Onwards</p>
+            <p><strong>Amrutha Gardens</strong><br>Hyderabad Road, Nizamabad</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Amrutha+Gardens+Nizamabad" target="_blank" class="map-btn">📍 View in Map</a>
+        </div>
+
+        <div class="timer-container" id="countdown">
+            <div class="time-part"><span class="time-num" id="days">--</span><span class="time-label">Days</span></div>
+            <div class="time-part"><span class="time-num" id="hours">--</span><span class="time-label">Hours</span></div>
+            <div class="time-part"><span class="time-num" id="mins">--</span><span class="time-label">Mins</span></div>
+            <div class="time-part"><span class="time-num" id="secs">--</span><span class="time-label">Secs</span></div>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="photo-placeholder">Amulya Sai</div>
+            <div class="photo-placeholder">Praneeth</div>
+        </div>
+
+        <footer>
+            <p>With best compliments from:</p>
+            <p><strong>Jonnalagadda Amogh, Near & Dear.</strong></p>
+        </footer>
+    </div>
+
+    <script>
+        const weddingTime = new Date("May 8, 2026 10:26:00").getTime();
+        
+        const updateTimer = () => {
+            const now = new Date().getTime();
+            const diff = weddingTime - now;
+
+            if (diff > 0) {
+                document.getElementById('days').innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+                document.getElementById('hours').innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                document.getElementById('mins').innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                document.getElementById('secs').innerText = Math.floor((diff % (1000 * 60)) / 1000);
+            } else {
+                document.getElementById('countdown').innerHTML = "<h2 style='grid-column: 1/-1; color: var(--soft-gold);'>Happily Married!</h2>";
+            }
+        };
+
+        setInterval(updateTimer, 1000);
+        updateTimer();
+    </script>
+</body>
+</html>

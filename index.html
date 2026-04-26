@@ -133,6 +133,16 @@
             margin: 30px auto;
         }
 
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         .time-part {
             background: rgba(191, 149, 63, 0.1);
             padding: 10px;
@@ -193,26 +203,26 @@
             <span>Avighnamasthu</span>
         </div>
 
-        <div style="font-size: 2rem; color: var(--soft-gold);">श्री गणेशाय नमः</div>
+        <div style="font-size: 2rem; color: var(--soft-gold);">Sri Ganeshaya Namaha</div>
         <div class="invite-text">Jonnalagadda's Wedding Invitation</div>
 
-        <div class="parents-info">
+        <div class="parents-info reveal">
             <strong>Smt. & Sri Jonnalagadda Nagamani - Srinivasa Rao</strong><br>
-            are inviting for the wedding ceremony of our daughter,
+            cordially invte you to the wedding ceremony of their daughter,
         </div>
 
-        <div class="couple-names">
+        <div class="couple-names reveal">
             Chi. La. Sow. Amulya Sai<br>
             <span style="font-family: 'Great Vibes'; font-size: 2.5rem; color: var(--soft-gold);">weds</span><br>
             Chi. Praneeth
         </div>
         
-        <div class="parents-info">
+        <div class="parents-info reveal">
           S/O <br>
           <strong>Smt. & Sri Borlam Sharada - Narender</strong>
         </div>
 
-        <div class="muhurtham-card">
+        <div class="muhurtham-card reveal">
             <h2>The Sacred Muhurtham</h2>
             <div style="font-size: 1.3rem;">Friday, 08th May 2026</div>
             <div style="font-size: 1.8rem; font-weight: bold; margin: 10px 0;">At 10:26 AM</div>
@@ -221,29 +231,30 @@
             <a href="https://www.google.com/maps/search/?api=1&query=Vasavi+Kalyana+Mandapam+Khairatabad+Hyderabad" target="_blank" class="map-btn">📍 View in Map</a>
         </div>
 
-        <div class="event-box">
+        <div class="event-box reveal">
             <h3>The Reception</h3>
             <p style="font-size: 1.1rem; margin: 15px 0;">Sunday, 10th May 2026<br>07:00 PM Onwards</p>
             <p><strong>Amrutha Gardens</strong><br>Hyderabad Road, Nizamabad</p>
             <a href="https://www.google.com/maps/search/?api=1&query=Amrutha+Gardens+Nizamabad" target="_blank" class="map-btn">📍 View in Map</a>
         </div>
 
-        <div class="timer-container" id="countdown">
+        <div class="timer-container reveal" id="countdown">
             <div class="time-part"><span class="time-num" id="days">--</span><span class="time-label">Days</span></div>
             <div class="time-part"><span class="time-num" id="hours">--</span><span class="time-label">Hours</span></div>
             <div class="time-part"><span class="time-num" id="mins">--</span><span class="time-label">Mins</span></div>
             <div class="time-part"><span class="time-num" id="secs">--</span><span class="time-label">Secs</span></div>
         </div>
 
-        <div class="gallery-grid">
-            <div class="photo-placeholder">Amulya Sai</div>
-            <div class="photo-placeholder">Praneeth</div>
+        <div class="gallery-grid reveal">
+            <div border="2px" ><img src="1.jpg" width="500px" style="border: 2px solid #D4AF37;" alt="">></div><br>
+            <div border="2px" ><img src="2.jpg" width="500px" style="border: 2px solid #D4AF37;" alt="">></div><br>
         </div>
-
+        <div class="reveal">
         <footer>
             <p>With best compliments from:</p>
             <p><strong>Jonnalagadda Amogh, Near & Dear.</strong></p>
         </footer>
+        </div>
     </div>
 
     <script>
@@ -265,6 +276,22 @@
 
         setInterval(updateTimer, 1000);
         updateTimer();
+
+
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Initial check
+
     </script>
 </body>
 </html>

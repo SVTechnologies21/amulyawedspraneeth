@@ -182,12 +182,23 @@
             color: #888;
         }
 
-        footer {
+        .footer {
             padding: 40px 20px;
             font-size: 0.9rem;
             color: var(--soft-gold);
             background: #4a0909;
         }
+
+        .image-box {
+            border: 2px solid #D4AF37;
+            width: fit-content;
+            margin: 40px auto; /* centers horizontally */
+        }
+
+          .image-box img {
+            display: block;
+        }
+
 
         @media (max-width: 600px) {
             .main-title { font-size: 2.5rem; }
@@ -246,8 +257,8 @@
         </div>
 
         <div class="gallery-grid reveal">
-            <div border="2px" ><img src="1.jpg" width="500px" style="border: 2px solid #D4AF37;" alt="">></div><br>
-            <div border="2px" ><img src="2.jpg" width="500px" style="border: 2px solid #D4AF37;" alt="">></div><br>
+            <div class="image-box"><img src="1.jpg" width="350px" alt=""></div>
+            <div class="image-box"><img src="2.jpg" width="350px" alt=""></div>
         </div>
         <div class="reveal">
         <footer>

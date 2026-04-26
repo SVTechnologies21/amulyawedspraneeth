@@ -189,15 +189,31 @@
             background: #4a0909;
         }
 
-        .image-box {
-            border: 2px solid #D4AF37;
-            width: fit-content;
-            margin: 40px auto; /* centers horizontally */
-        }
+        /* Update these sections in your existing CSS */
 
-          .image-box img {
-            display: block;
-        }
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Automatically adjusts columns based on screen width */
+    gap: 20px;
+    padding: 0 10px;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.image-box {
+    border: 2px solid #D4AF37;
+    width: 100%; /* Take full width of the grid cell */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.image-box img {
+    width: 100%;        /* Image fills the container */
+    height: auto;       /* Maintains aspect ratio */
+    display: block;
+    object-fit: cover;  /* Ensures the image doesn't look stretched */
+}
 
 
         @media (max-width: 600px) {
@@ -257,9 +273,10 @@
         </div>
 
         <div class="gallery-grid reveal">
-            <div class="image-box"><img src="1.jpg" width="300px" alt=""></div><br>
-            <div class="image-box"><img src="2.jpg" width="300px" alt=""></div>
+        <div class="image-box"><img src="1.jpg" alt="Wedding Photo 1"></div>
+        <div class="image-box"><img src="2.jpg" alt="Wedding Photo 2"></div>
         </div>
+
         <div class="reveal">
         <footer>
             <p>With best compliments from:</p>
